@@ -12,7 +12,13 @@ test('staging proposal remains manual, inert and staged-only',async()=>{
  assert.doesNotMatch(text,/\bnpm publish\b/);
  assert.match(text,/git merge-base --is-ancestor HEAD origin\/main/);
  assert.match(text,/sha256sum --check/);
+ assert.ok(text.includes('c2088b2585e913c11f74a045805bcef186e8e830f5c626e46c0c299e6a6eb7c4'));
  assert.match(text,/test \"\$GITHUB_REF\" = \"refs\/heads\/main\"/);
  assert.match(text,/test \"\$APPROVED_SHA\" = \"\$GITHUB_SHA\"/);
  assert.match(text,/pkg\.private|v\.private/);
+});
+
+test('legacy release events cannot run the direct-publish job',async()=>{
+ const text=await readFile('.github/workflows/publish.yml','utf8');
+ assert.match(text,/  publish:\n(?:    #[^\n]*\n)*    if:\s*\$\{\{ false \}\}/);
 });

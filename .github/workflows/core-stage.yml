@@ -37,7 +37,7 @@ jobs:
         with:
           node-version: '24.19.0'
           registry-url: https://registry.npmjs.org
-      - run: npm install --global npm@11.15.0
+      - run: npm install --global npm@11.15.0 --ignore-scripts
       - name: Verify reviewed source identity and ancestry
         env:
           APPROVED_SHA: ${{ inputs.source_commit }}
@@ -56,6 +56,7 @@ jobs:
           EXPECTED_SHA256: ${{ inputs.artifact_sha256 }}
         run: |
           [[ "$EXPECTED_SHA256" =~ ^[0-9a-f]{64}$ ]]
+          test "$EXPECTED_SHA256" = "c2088b2585e913c11f74a045805bcef186e8e830f5c626e46c0c299e6a6eb7c4"
           umask 077
           mkdir "$RUNNER_TEMP/core-src" "$RUNNER_TEMP/core-out"
           git archive HEAD | tar -x -C "$RUNNER_TEMP/core-src"
