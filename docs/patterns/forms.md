@@ -1,5 +1,7 @@
 # Krigsvold: a validated form
 
+> Candidate imports below refer to an unpublished local `@krigsvold/core` tarball; published `@krigsvold/theme` remains available.
+
 Experimental pattern contract 0.3 · Application extension · React reference specimen
 
 ## Purpose and composition
@@ -38,4 +40,4 @@ The reference includes validation, pending, failed/retry, saved and discard-dial
 
 ## Native HTML styling
 
-For Astro or direct HTML, use core 2.2.3 `@krigsvold/theme/forms.css` (included by `full.css`) and the exact anatomy in `docs/form-styling.md`. The Astro 1.2.2 starter `/form/` is a runnable host-controller example. Read the classes as visual contracts, not controllers. Set native labels, described-by links, invalid states, summary focus, disabled/pending behavior and dialog return focus in host code.
+For Astro or direct HTML, use core 2.2.3 `@krigsvold/core/forms.css` (included by `full.css`) and the exact anatomy in `docs/form-styling.md`. The Astro 1.2.2 starter `/form/` is a runnable host-controller example. Read the classes as visual contracts, not controllers. Set native labels, described-by links, invalid states, summary focus, disabled/pending behavior and dialog return focus in host code.

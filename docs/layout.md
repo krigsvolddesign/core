@@ -1,5 +1,7 @@
 # Krigsvold layout extraction
 
+> Candidate imports below refer to an unpublished local `@krigsvold/core` tarball; published `@krigsvold/theme` remains available.
+
 Release candidate: core 2.1.0 and Astro 1.1.0. Existing color, font, and component contracts remain available.
 
 ## Source observations
@@ -13,7 +15,7 @@ The originating site uses broad section bands, paired geography and feature regi
 
 The core retains its original reading/content/archive widths. New layout variables normalize recurring gaps, a 20rem sidebar, a 30rem minimum main region, a 20rem card minimum, and a 22rem split-panel basis. These are documented defaults, not a claim that every source element used exactly the same values. Krigsvold's default split is `equal`.
 
-Use `@krigsvold/theme/layout.css` with foundation variables for structural classes; it loads no fonts or palette. `full.css` includes it. `layout.json` and the ESM/CommonJS `layout` export describe defaults and provenance. No existing source value is silently replaced.
+Use `@krigsvold/core/layout.css` with foundation variables for structural classes; it loads no fonts or palette. `full.css` includes it. `layout.json` and the ESM/CommonJS `layout` export describe defaults and provenance. No existing source value is silently replaced.
 
 Intrinsic wrapping responds to the containing region. Grid `columns` is a maximum, not a promise to fit that many columns at every width. Sidebars use a separate main-content minimum; splits retain DOM order. There is no overflow-hiding workaround. Wide tables belong in a labelled `.krigsvold-scroll` region with `tabindex="0"` when keyboard scrolling is needed.
 
