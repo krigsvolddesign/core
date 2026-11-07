@@ -1,6 +1,6 @@
 # Direct HTML anatomy
 
-> Candidate imports below refer to an unpublished local `@krigsvold/core` tarball; published `@krigsvold/theme` remains available.
+> Imports use the published `@krigsvold/core` package. Existing `@krigsvold/theme` versions remain available; migrate package names and framework peers explicitly. See [migration guidance](core-migration.md).
 
 Core 2.2.3 · Framework-independent classes. Import `@krigsvold/core/full.css` and optional `fonts.css`, then use `class="krigsvold" data-krigsvold="light"` on your shell. A class beginning `krigsvold-` is namespaced; a primitive name in `layout.json` is not itself an HTML class. These contracts work in server HTML, Astro and React JSX (`className`) without reconstructing another framework's implementation.
 

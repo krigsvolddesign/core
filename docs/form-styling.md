@@ -1,6 +1,6 @@
 # Native HTML forms
 
-> Candidate imports below refer to an unpublished local `@krigsvold/core` tarball; published `@krigsvold/theme` remains available.
+> Imports use the published `@krigsvold/core` package. Existing `@krigsvold/theme` versions remain available; migrate package names and framework peers explicitly. See [migration guidance](core-migration.md).
 
 Core 2.2.3 · Experimental application extension. Import `@krigsvold/core/full.css`, or import colors, foundation, components and `@krigsvold/core/forms.css` explicitly. Add `.krigsvold` and `data-krigsvold="light"` or `"dark"` to a common ancestor. Fonts are optional and separately imported. The source profile is optional and loads last.
 
