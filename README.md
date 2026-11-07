@@ -1,6 +1,6 @@
 # Krigsvold core
 
-> **Unpublished migration candidate:** `@krigsvold/core` is a proposed new package identity, not an announced registry release. Install the local tarball to test it. Existing `@krigsvold/theme` installations remain the supported published path until a separately approved release and migration. This review branch is marked private to prevent publication.
+`@krigsvold/core` is published on npm. Install it with `npm install @krigsvold/core`. The source repository retains `private: true` as a publication safeguard; the guarded staging workflow changes only that flag in an isolated archive. A source version does not prove that its matching registry version has been published. Existing `@krigsvold/theme` versions remain available for compatibility; see the [migration guide](docs/core-migration.md).
 
 `@krigsvold/core` is the framework-independent source of truth for Krigsvold. It contains Light/Dark semantic colors and the typography, spacing, shape, depth, and interaction definitions extracted from krigsvold.org.
 
@@ -45,9 +45,9 @@ Edit `source.json` here; run `npm ci --ignore-scripts`, `npm run build`, `npm te
 
 The `capabilities` export records what each integration applies, requires separate configuration for, or cannot support. A browser color theme does not change fonts. Editors and terminals use the monospace role only where their host allows it.
 
-The npm scope is `krigsvold`. To test this candidate, run `npm pack` and install the resulting local tarball. Published consumers continue to use `@krigsvold/theme`. Package versions are independent of application-port versions.
+The npm scope is `krigsvold`. To test source changes, run `npm pack` and install the resulting local tarball in a clean consumer. Local installation verifies a candidate, not registry publication. Package versions are independent of application-port versions.
 
-Application port generators in `krigsvolddesign/krigsvoldtheme` currently consume `@krigsvold/theme`. Their migration requires a separate reviewed change. Ordinary verification does not publish; publishing a GitHub release triggers the release workflow.
+Historical application port generators may still consume `@krigsvold/theme`. Migrate each consumer explicitly and retain its previous version for rollback. Ordinary verification and GitHub Release creation do not publish npm packages.
 
 ## Layouts
 
@@ -55,7 +55,7 @@ Version 2.1 adds optional [`layout.css`](docs/layout.md), the `layout` JavaScrip
 
 ## Releases
 
-The current GitHub release workflow can publish automatically through npm trusted publishing; this private candidate cannot be published. See [release setup](docs/releasing.md) for the one-time package authorization and release order.
+The manual Core staging workflow accepts an exact production commit and reproducible archive digest. npm owner approval completes staged publication; the protected-tag workflow subsequently verifies the published artifact and creates its GitHub source release. See [release procedure](docs/releasing.md).
 
 ## Foundations specification
 
@@ -63,12 +63,12 @@ Read the [working foundations specification](docs/foundations.md) for spacing re
 
 ## Experimental UI language
 
-[Grammar](docs/grammar.md), [source decisions](docs/source-decisions.md), [framework and migration guide](docs/consolidation.md), and [machine-readable support](language.json) describe the experimental core 2.2.3 / Astro 1.2.2 consolidation. Existing defaults remain compatible; the source profile is opt-in.
+[Grammar](docs/grammar.md), [source decisions](docs/source-decisions.md), [framework and migration guide](docs/consolidation.md), and [machine-readable support](language.json) record the experimental grammar 0.3 consolidation and its original framework snapshots. Existing defaults remain compatible; the source profile is opt-in.
 
 [Grammar coverage review](docs/coverage.md), [validated forms](docs/patterns/forms.md), and [query/results patterns](docs/patterns/query-results.md) extend the experimental grammar to 0.3.
 
-## Adoption repair preview
+## Historical framework snapshots
 
-The existing `@krigsvold/theme@next` is the experimental 2.2.3 line; `latest` remains the stable 2.1 line. Package, grammar and framework versions are separate: grammar 0.3 is the design contract, core 2.2.3 supplies CSS/tokens, Astro 1.2.2 supplies wrappers, and React 0.1.0 retains its tested core 2.1.0 dependency. Exact package versions belong in the lockfile.
+The existing `@krigsvold/theme@next` is the experimental 2.2.3 line; `latest` remains the stable 2.1 line. These are historical theme/framework snapshots, not the current Core installation command. Package, grammar and framework versions are separate. Check each framework package manifest and lockfile before migrating; the Core package name does not satisfy an existing `@krigsvold/theme` peer automatically. Exact package versions belong in the lockfile.
 
 [Direct HTML anatomy](docs/native-html.md) documents layout/pattern classes. [Native form styling](docs/form-styling.md) documents the optional `forms.css` layer included in `full.css`; behavior remains host-owned. Existing colors/fonts and marks retain their native identity.

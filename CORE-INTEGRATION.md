@@ -1,7 +1,7 @@
-# Core integration under Issue #81
+# Core integration
 
-The integration preserves the reviewed `@krigsvold/core` package identity, source version, CSS, fonts, exports and historic theme tags. It combines the existing live-main release-authority guard, GitFlow branch policy and generated TypeScript design/foundation provenance fixes without restoring old theme package metadata. The genuine Core version is already published and must never be republished. The declaration additions are forward source improvements; registry verification refers to the independently verified reviewed published archive, not a claim that the new source was published.
+The accepted Core identity is `@krigsvold/core`; version 2.2.4 is already published and must never be republished. Version 2.2.5 carries additive TypeScript declarations for existing runtime design groups and foundation provenance. It preserves CSS, fonts, all 25 exports and historical theme packages/tags.
 
-Publication remains disabled in tag-release proposals. Existing manual stage support is preserved; no workflow dispatch, tag, release or npm mutation is part of this integration. Release ancestry follows feature → develop → release branch → main, followed by a main back-merge. Current branch and approval controls must remain intact.
+The source remains `private: true`. The manual staging workflow verifies exact current production source, complete package/source/lockfile identity, registry absence and two identical normalized archives before stage-only npm publication. Separate npm owner approval remains required. The protected-tag workflow completes the GitHub source release only after verifying the registry artifact and its staging provenance; it cannot publish npm.
 
-Read-only verification jobs have ten-minute bounds and obsolete-run cancellation. Feature pushes no longer duplicate pull-request verification. All assertions and signature/provenance checks remain.
+Integration follows feature → develop → release branch → main, then a main back-merge. The [canonical GitFlow acceptance policy](https://github.com/k3jph/design-workbench/blob/develop/docs/GITFLOW-ACCEPTANCE.md) specifies one required fast `verify` check and zero human reviewers; extended suites are advisory. See [migration guidance](docs/core-migration.md) and [release procedure](docs/releasing.md).
