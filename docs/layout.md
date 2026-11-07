@@ -1,6 +1,6 @@
 # Krigsvold layout extraction
 
-> Candidate imports below refer to an unpublished local `@krigsvold/core` tarball; published `@krigsvold/theme` remains available.
+> Imports use the published `@krigsvold/core` package. Existing `@krigsvold/theme` versions remain available; migrate package names and framework peers explicitly. See [migration guidance](core-migration.md).
 
 Release candidate: core 2.1.0 and Astro 1.1.0. Existing color, font, and component contracts remain available.
 

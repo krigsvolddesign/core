@@ -1,6 +1,6 @@
 # Krigsvold: a validated form
 
-> Candidate imports below refer to an unpublished local `@krigsvold/core` tarball; published `@krigsvold/theme` remains available.
+> Imports use the published `@krigsvold/core` package. Existing `@krigsvold/theme` versions remain available; migrate package names and framework peers explicitly. See [migration guidance](../core-migration.md).
 
 Experimental pattern contract 0.3 · Application extension · React reference specimen
 

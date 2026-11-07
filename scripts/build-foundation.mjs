@@ -7,6 +7,7 @@ const declarations = Object.entries(foundation.tokens).map(([key, value]) => `  
 await writeFile('dist/foundation.css', `/* Origin: krigsvold.org. Variables only; no element styles or font downloads. */\n:root, [data-krigsvold] {\n${declarations}\n}\n@media (prefers-reduced-motion: reduce) {\n  :root, [data-krigsvold] { --krigsvold-transition-ui: 0s; --krigsvold-motion-duration: 0s; }\n}\n`);
 const typography = `/* Optional typography, independent of font loading. */
 :where(.krigsvold) { font-family: var(--krigsvold-font-sans); font-size: var(--krigsvold-text-body); line-height: var(--krigsvold-leading-body); }
+:where(.krigsvold) :where(h1,h2,h3,h4,h5,h6) { overflow-wrap: anywhere; }
 :where(.krigsvold) :where(h1,h2,h3) { font-family: var(--krigsvold-font-serif); font-weight: var(--krigsvold-weight-heading); letter-spacing: var(--krigsvold-tracking-heading); line-height: var(--krigsvold-leading-heading); text-wrap: balance; }
 :where(.krigsvold) :where(h4,h5,h6) { font-family: var(--krigsvold-font-sans); font-weight: 700; line-height: var(--krigsvold-leading-heading); }
 :where(.krigsvold) h1 { font-size: var(--krigsvold-text-h1); }
