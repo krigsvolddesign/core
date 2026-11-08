@@ -1,0 +1,8 @@
+/* Opt-in, source-derived Krigsvold website grammar.
+   The MIT-licensed Material Kit 3.0.4/Bootstrap 5.2.3 source dependency
+   remains isolated in site-vendor.css (not in full.css).
+   Site identity, images, content and behavior are supplied by consumers. */
+@import './site-vendor.css';
+@import './foundation.css';
+@import './legacy.css';
+@import './site-layout.css';

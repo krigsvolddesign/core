@@ -42,5 +42,5 @@ await writeFile('dist/legacy.css', `/* Optional aliases for an existing website 
 await writeFile('dist/layout.css', await readFile(new URL('../styles/layout.css',import.meta.url),'utf8'));
 await writeFile('dist/layout.json', JSON.stringify(source.layout,null,2)+'\n');
 
-for (const name of ['patterns','source-profile','forms']) await writeFile(`dist/${name}.css`, await readFile(new URL(`../styles/${name}.css`, import.meta.url), 'utf8'));
+for (const name of ['patterns','source-profile','forms','site','site-layout','site-vendor']) await writeFile(`dist/${name}.css`, await readFile(new URL(`../styles/${name}.css`, import.meta.url), 'utf8'));
 await writeFile('dist/language.json', await readFile(new URL('../language.json', import.meta.url), 'utf8'));
