@@ -65,7 +65,6 @@ body { margin:0; }
 .dash-chart-threshold-label { fill:var(--dash-warning); font:13px var(--dash-ui-font); }
 .dash-app .example-table-scroll table { width:100%; }
 .dash-app .dash-sort { margin:0; }
-.dash-app .example-pagination { display:flex; flex-wrap:wrap; align-items:center; gap:.75rem; }
 .dash-app .dash-panel > h2 { margin-top:0; }
 
 body.krigsvold.dashboard-page { display:block; }
