@@ -276,3 +276,6 @@ html[data-appearance="dark"] body.krigsvold.hero-context--compact:not(.dashboard
   .site-navbar .navbar-brand span { font-size:min(1em, 10vw); overflow-wrap:normal; word-break:normal; }
   .site-navbar .navbar-toggler { margin-inline:auto; }
 }
+
+/* Search spacing belongs to the composition; Core owns native fields. */
+.site-search-input { margin:.5rem 0 2rem; }
