@@ -13,7 +13,7 @@ body.krigsvold.dashboard-page main :is(input,select,textarea)[aria-invalid=true]
 body.krigsvold.dashboard-page main :is(label,legend) { color:var(--krigsvold-text); font:700 .9rem/1.5 var(--krigsvold-font-sans); }
 body.krigsvold.dashboard-page main label { display:block; margin:0 0 .5rem; }
 body.krigsvold.dashboard-page main legend { margin:0 0 1rem; padding:0; }
-body.krigsvold.dashboard-page main label.example-checkbox { display:flex; flex-direction:row; align-items:center; gap:.75rem; min-height:2.75rem; margin-block:1rem; }
+body.krigsvold.dashboard-page main label.example-checkbox { display:flex; flex-direction:row; align-items:center; gap:.75rem; min-height:2.75rem; margin-block:.75rem 0; }
 body.krigsvold.dashboard-page main :is(input[type=checkbox],input[type=radio]) { flex:0 0 1.2rem; width:1.2rem; height:1.2rem; min-width:0; min-height:0; max-width:1.2rem; margin:0; padding:0; accent-color:var(--krigsvold-accent); }
 body.krigsvold.dashboard-page main .krigsvold-button {
   display:inline-flex; align-items:center; justify-content:center; gap:.5rem;
@@ -29,5 +29,10 @@ body.krigsvold.dashboard-page main .krigsvold-button--secondary { background:var
 body.krigsvold.dashboard-page main .krigsvold-button--secondary:hover { background:var(--krigsvold-button-secondary-hover); color:var(--krigsvold-button-secondary-text); }
 body.krigsvold.dashboard-page main .krigsvold-button:disabled { background:var(--krigsvold-disabled-bg); color:var(--krigsvold-disabled-text); border-color:var(--krigsvold-disabled-bg); cursor:default; opacity:1; }
 body.krigsvold.dashboard-page main :focus-visible { outline:3px solid var(--krigsvold-focus-ring); outline-offset:3px; }
-body.krigsvold.dashboard-page main .dash-actions .krigsvold-button { margin:0; }
+/* Containers own command spacing; table controls stay centered in their cells. */
+body.krigsvold.dashboard-page main :is(.dash-actions,.dash-form-actions,.example-pagination) .krigsvold-button,
+body.krigsvold.dashboard-page main .dash-app table button { margin:0; }
+body.krigsvold.dashboard-page main .dash-controls .example-help { margin:.375rem 0 0; font:.875rem/1.5 var(--krigsvold-font-sans); color:var(--krigsvold-muted); }
+body.krigsvold.dashboard-page main .dash-form-actions { display:flex; flex-wrap:wrap; align-items:center; justify-content:flex-end; gap:.75rem; margin:1rem 0 0; }
+body.krigsvold.dashboard-page main :is(.dash-dialog .dash-actions,.example-pagination) { justify-content:flex-end; }
 @media(max-width:42rem) { body.krigsvold.dashboard-page main .krigsvold-button { padding-inline:min(1rem,12px); } }
