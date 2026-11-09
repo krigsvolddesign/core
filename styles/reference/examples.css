@@ -12,8 +12,8 @@
 .example-root h2 { font-size: clamp(1.5rem, 2.4vw, 2rem); margin: 0 0 1.25rem; scroll-margin-top: 8rem; }
 .example-root h3 { font-size: 1.2rem; margin: 0 0 .7rem; }
 .example-root p { margin: 0 0 1rem; }
-.example-root a:not(.example-button) { color: var(--ex-link); text-underline-offset: .2em; }
-.example-root a:not(.example-button):hover { text-decoration: underline; }
+.example-root a:not(.example-button, .krigsvold-button) { color: var(--ex-link); text-underline-offset: .2em; }
+.example-root a:not(.example-button, .krigsvold-button):hover { text-decoration: underline; }
 .example-root :focus-visible { outline: 3px solid var(--ex-focus); outline-offset: 4px; }
 /* Button appearance belongs to each family's native shell. */
 .example-root .example-button { text-decoration: none; }
@@ -32,6 +32,7 @@ html[data-appearance=dark] .example-prose :is(blockquote,.footnotes) { color: va
 .example-prose :not(pre) > code { background: var(--ex-panel); padding: .1em .3em; }
 .example-prose math { font-size: 1.4rem; margin-block: 1rem; }
 .example-actions, .example-context { display: flex; flex-wrap: wrap; gap: .75rem; margin-block: 1.5rem; }
+.example-actions { justify-content: flex-end; }
 .example-context { border-bottom: 1px solid var(--ex-line); padding-bottom: 1rem; }
 .example-notice { background: var(--ex-panel); border-inline-start: 3px solid var(--ex-link); padding: 1rem 1.25rem; margin-bottom: 2rem; font-size: .95rem; }
 .example-notice p:last-child { margin: 0; }
@@ -147,7 +148,7 @@ html[data-appearance=dark] .example-local-index .eyebrow { color: var(--ex-link)
   .example-table-scroll { overflow: visible; }
   .example-root table { font-size: 9pt; }
   .example-root :is(th,td) { min-width: 0; padding: .4rem; }
-  .example-root a:not(.example-button) { text-decoration: underline; }
+  .example-root a:not(.example-button, .krigsvold-button) { text-decoration: underline; }
   .example-root figure { break-inside: avoid; }
 }
 .example-root :is(label, legend) { color: var(--ex-text); }
