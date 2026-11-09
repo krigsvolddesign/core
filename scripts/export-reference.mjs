@@ -1,7 +1,7 @@
 import {readFile,writeFile} from 'node:fs/promises';
 const core=['theme','foundation','typography','components','layout','patterns','forms','source-profile'];
 const reference=['shell','documents','examples','examples-family','components','scientific'];
-const files=[...core.map(name=>`dist/${name}.css`),...reference.map(name=>`styles/reference/${name}.css`),'styles/dashboards.css','styles/dashboard-controls.css'];
+const files=[...core.map(name=>`dist/${name}.css`),...reference.map(name=>`styles/reference/${name}.css`),'styles/dashboards.css','styles/dashboard-controls.css','styles/website.css'];
 const css=await Promise.all(files.map(async file=>{
  const css=await readFile(file,'utf8');
  // The captured shell is retained for archive identity. Its search field used
