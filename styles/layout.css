@@ -49,3 +49,5 @@
 @media print { .krigsvold-sidebar,.krigsvold-split { display:block; } .krigsvold-sidebar > *,.krigsvold-split > * { margin-block-end:var(--krigsvold-layout-gap); } }
 .krigsvold-page-header { border-block-end:var(--krigsvold-divider-thickness) solid var(--krigsvold-accent); }
 .krigsvold-page-header h1 { font-family:var(--krigsvold-font-display); font-size:var(--krigsvold-text-display); font-weight:var(--krigsvold-weight-heading); letter-spacing:var(--krigsvold-tracking-display); line-height:var(--krigsvold-leading-display); }
+
+.krigsvold-reading-layout__contents--flow { position:static; max-block-size:none; overflow:visible; }

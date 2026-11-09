@@ -1,0 +1,107 @@
+/* Chat markup contract. */
+[data-chat] fieldset { display:grid; gap:.5rem; min-width:0; }
+[data-chat] label textarea { display:block; margin-top:.5rem; font-weight:400; }
+.chat-actions { display:flex; flex-wrap:wrap; gap:.75rem; }
+
+/* Content markup contract. */
+.recipe { min-width:0; overflow-wrap:anywhere; }
+.recipe figure { margin-inline:0; }
+.recipe figure img { max-width:100%; height:auto; }
+.recipe-table { max-width:100%; overflow-x:auto; }
+.recipe-tags { display:flex; flex-wrap:wrap; gap:1rem; padding:0; list-style:none; }
+.recipe-actions { list-style:none; padding:0; display:flex; flex-wrap:wrap; gap:1rem; }
+@media print { [data-list-item][hidden] { display:list-item!important; } [data-pagination] { display:none!important; } }
+
+/* DemoForm markup contract. */
+[data-demo-form] fieldset { display:grid; gap:.5rem; min-width:0; }
+[data-demo-form] fieldset :is(input:not([type=checkbox]),select,textarea) { font-size:1rem; min-width:0; max-width:100%; box-sizing:border-box; }
+.demo-actions { display:flex; gap:.75rem; flex-wrap:wrap; margin-top:1rem; }
+
+/* DemoHead markup contract. */
+body.reference-specimen .krigsvold-page-header__metadata {color:inherit;}
+/* The source shell's generic label color must not override native form ink. */
+body.reference-specimen .krigsvold-form :is(.krigsvold-radio,.krigsvold-checkbox) {color:inherit;}
+body.reference-specimen .krigsvold-page-header {padding:2.5rem 0 3rem;background:var(--navy-950,#061325);color:#fff;}
+body.reference-specimen .krigsvold-page-header h1 {font-size:clamp(2rem,4vw,3.5rem);line-height:1.12;color:inherit;}
+body.reference-specimen .krigsvold-page-header .krigsvold-eyebrow {color:inherit;}
+body.reference-specimen .krigsvold-page-header__summary {max-width:46rem;font-size:1rem;line-height:1.5;color:inherit;}
+/* Use the package footer grid; the host identity remains a vertical group. */
+body.reference-specimen .krigsvold-site-footer .footer-owner {display:inline-flex;}
+body.reference-specimen main caption {color:var(--krigsvold-muted);}
+html[data-appearance="dark"] body.reference-specimen .krigsvold-page-header {background:var(--paper);color:var(--ink);}
+@media(min-width:992px){
+ body.reference-specimen.hero-context--compact .krigsvold-page-header {padding-top:clamp(8.25rem,10vw,9.25rem);}
+}
+body.reference-specimen:has(.site-navbar:not([data-navigation-ready]),.site-navbar.is-menu-open) .krigsvold-page-header {padding-top:2.5rem;}
+@media(forced-colors:active){body.reference-specimen [class$="-page-header"] {background:Canvas;color:CanvasText;}body.reference-specimen [class$="-page-header"] h1,body.reference-specimen [class$="-page-header"] p {color:CanvasText;}}
+@media print {body.reference-specimen [class$="-page-header"] {padding:1rem 0;background:white;color:black;}}
+
+/* Gallery markup contract. */
+.gallery-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,17rem),1fr)); gap:1.5rem; }
+.gallery figure { margin:0; }
+.gallery img { display:block; width:100%; height:auto; }
+.gallery dialog { max-width:min(90vw, 64rem); max-height:90vh; overflow:auto; }
+
+/* InterfaceControls markup contract. */
+.reference-controls {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+    column-gap: var(--krigsvold-space-3);
+    inline-size: min(100%, 32rem);
+    margin-block: 1rem 1.5rem;
+  }
+  .reference-controls__field { display: grid; gap: var(--krigsvold-space-2); min-inline-size: 0; }
+  .reference-controls__field input {
+    inline-size: 100%;
+    block-size: var(--krigsvold-control-height);
+    min-block-size: var(--krigsvold-control-height);
+    padding-block: 0;
+  }
+  .reference-controls .krigsvold-button { align-self: end; margin: 0; }
+  @media (max-width: 22rem) {
+    .reference-controls { grid-template-columns: minmax(0, 1fr); row-gap: var(--krigsvold-space-3); }
+    .reference-controls .krigsvold-button { justify-self: start; }
+  }
+
+/* Simulations markup contract. */
+:is([data-sensors],[data-scene]) .controls { display:grid; gap:.5rem; }
+[data-scene] figure { margin-inline:0; }
+[data-scene] figure img { max-width:100%; height:auto; }
+
+/* Workspace markup contract. */
+.workspace { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr)); gap:2rem; }
+.workspace-records { padding:0; list-style:none; }
+.workspace-records li { margin-block:1.5rem; }
+.workspace-records [data-record-status] { margin-inline-start:.75rem; }
+.workspace-actions { display:flex; flex-wrap:wrap; gap:.75rem; }
+
+/* Hero markup contract. */
+.page-masthead h1 { text-wrap:wrap; }
+
+/* Page markup contract. */
+.krigsvold .editorial-content :is(h1,h2,h3) { text-wrap:wrap; }
+.reference-nested-grid { max-inline-size:24rem; }
+
+/* Hero crops use named focal positions; artwork dimensions remain content. */
+[data-hero-focal="center"] { --krigsvold-hero-focal:center; object-position:center; }
+[data-hero-focal="top"] { --krigsvold-hero-focal:top; object-position:top; }
+[data-hero-focal="bottom"] { --krigsvold-hero-focal:bottom; object-position:bottom; }
+[data-hero-focal="left"] { --krigsvold-hero-focal:left; object-position:left; }
+[data-hero-focal="right"] { --krigsvold-hero-focal:right; object-position:right; }
+[data-hero-focal="left top"] { --krigsvold-hero-focal:left top; object-position:left top; }
+[data-hero-focal="right top"] { --krigsvold-hero-focal:right top; object-position:right top; }
+[data-hero-focal="left bottom"] { --krigsvold-hero-focal:left bottom; object-position:left bottom; }
+[data-hero-focal="right bottom"] { --krigsvold-hero-focal:right bottom; object-position:right bottom; }
+.krigsvold-palette-ribbon > :nth-child(1) { --palette-swatch:var(--krigsvold-color-navy-950,#061325); }
+.krigsvold-palette-ribbon > :nth-child(2) { --palette-swatch:var(--krigsvold-color-navy-900,#0a1d35); }
+.krigsvold-palette-ribbon > :nth-child(3) { --palette-swatch:var(--krigsvold-color-navy-800,#123456); }
+.krigsvold-palette-ribbon > :nth-child(4) { --palette-swatch:var(--krigsvold-color-blue-600,#286a9d); }
+.krigsvold-palette-ribbon > :nth-child(5) { --palette-swatch:var(--krigsvold-color-ice-400,#9ed5e6); }
+.krigsvold-palette-ribbon > :nth-child(6) { --palette-swatch:var(--krigsvold-color-ice-200,#d9eef4); }
+.krigsvold-palette-ribbon > :nth-child(7) { --palette-swatch:var(--krigsvold-color-ice-100,#eef8fa); }
+.krigsvold-palette-ribbon > :nth-child(8) { --palette-swatch:var(--krigsvold-color-paper,#fbfaf7); }
+.krigsvold-palette-ribbon > :nth-child(9) { --palette-swatch:var(--krigsvold-color-ink,#17202a); }
+.krigsvold-palette-ribbon > :nth-child(10) { --palette-swatch:var(--krigsvold-color-muted,#56616c); }
+.krigsvold-palette-ribbon > :nth-child(11) { --palette-swatch:var(--krigsvold-color-rule,#d9dee2); }
+.krigsvold-palette-ribbon > :nth-child(12) { --palette-swatch:var(--krigsvold-color-gold,#b58a3b); }
