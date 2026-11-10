@@ -25,7 +25,7 @@
 .krigsvold-button:hover { background: var(--krigsvold-button-hover, var(--krigsvold-accent-hover)); color: var(--krigsvold-button-text, var(--krigsvold-on-accent)); }
 .krigsvold-button:disabled { background: var(--krigsvold-disabled-bg); color: var(--krigsvold-disabled-text); border-color: var(--krigsvold-disabled-bg); }
 .krigsvold-card { min-inline-size: 0; padding: var(--krigsvold-space-4); border: 0; border-top: var(--krigsvold-divider-thickness) solid var(--krigsvold-accent); border-radius: var(--krigsvold-radius-card); background: var(--krigsvold-panel); color: var(--krigsvold-text); box-shadow: var(--krigsvold-shadow-card); }
-.krigsvold-skip-link { position: absolute; inset-block-start: var(--krigsvold-space-2); inset-inline-start: var(--krigsvold-space-2); z-index: 1000; transform: translateY(-200%); padding: var(--krigsvold-space-3); background: var(--krigsvold-bg); color: var(--krigsvold-text); font-family: var(--krigsvold-font-sans); }
+.krigsvold-skip-link { position: absolute; inset-block-start: var(--krigsvold-space-2); inset-inline-start: var(--krigsvold-space-2); z-index: 2000; transform: translateY(-200%); padding: var(--krigsvold-space-3); background: var(--krigsvold-bg); color: var(--krigsvold-text); font-family: var(--krigsvold-font-sans); }
 .krigsvold-skip-link:focus { transform: none; }
 
 .krigsvold-display { font-family: var(--krigsvold-font-display); font-size: var(--krigsvold-text-display); font-weight: 700; line-height: var(--krigsvold-leading-display); letter-spacing: var(--krigsvold-tracking-display); text-wrap: balance; }
