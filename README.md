@@ -1,6 +1,6 @@
 # Krigsvold core
 
-`@krigsvold/core` is published on npm. Install it with `npm install @krigsvold/core`. The source repository retains `private: true` as a publication safeguard; the guarded staging workflow changes only that flag in an isolated archive. A source version does not prove that its matching registry version has been published. Existing `@krigsvold/theme` versions remain available for compatibility; see the [migration guide](docs/core-migration.md).
+`@krigsvold/core@3.0.0` is the framework-independent Krigsvold foundation. Version 3 renames the canonical stylesheet to `krigsvold.css`; existing `reference.css` imports must migrate. See [upgrading to Core 3](docs/migration-3.md).
 
 `@krigsvold/core` is the framework-independent source of truth for Krigsvold. It contains Light/Dark semantic colors and the typography, spacing, shape, depth, and interaction definitions extracted from krigsvold.org.
 
@@ -55,7 +55,7 @@ Version 2.1 adds optional [`layout.css`](docs/layout.md), the `layout` JavaScrip
 
 ## Releases
 
-The manual Core staging workflow accepts an exact production commit and reproducible archive digest. npm owner approval completes staged publication; the protected-tag workflow subsequently verifies the published artifact and creates its GitHub source release. See [release procedure](docs/releasing.md).
+An accepted, unused version on `main` is published through the existing trusted publisher. Its manual workflow also supports staging. The protected-tag workflow verifies the published artifact and creates its GitHub source release. See [release procedure](docs/releasing.md).
 
 ## Foundations specification
 
@@ -72,3 +72,7 @@ Read the [working foundations specification](docs/foundations.md) for spacing re
 The existing `@krigsvold/theme@next` is the experimental 2.2.3 line; `latest` remains the stable 2.1 line. These are historical theme/framework snapshots, not the current Core installation command. Package, grammar and framework versions are separate. Check each framework package manifest and lockfile before migrating; the Core package name does not satisfy an existing `@krigsvold/theme` peer automatically. Exact package versions belong in the lockfile.
 
 [Direct HTML anatomy](docs/native-html.md) documents layout/pattern classes. [Native form styling](docs/form-styling.md) documents the optional `forms.css` layer included in `full.css`; behavior remains host-owned. Existing colors/fonts and marks retain their native identity.
+
+### React presentation
+
+`react.css` adds the React component anatomy to the existing native Core styles. `react-reference.css` supplies the optional reference application layouts and the hydration-root bridge. Both are authored here; React repositories only import or copy these exports. The shared `krigsvold.css` remains identical for Astro, Jekyll, and React.
