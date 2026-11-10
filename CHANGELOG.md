@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.0.1
+
+- Restore bounded React control labels, wrapped actions and shrinkable form groups at narrow widths and enlarged text.
+
+
 ## 3.0.0
 
 - **Breaking:** replace the published `@krigsvold/core/reference.css` export with `@krigsvold/core/krigsvold.css`. Update imports and copied asset paths; see [the migration guide](docs/migration-3.md).
