@@ -1,5 +1,12 @@
 # Changelog
 
+## 3.0.0
+
+- **Breaking:** replace the published `@krigsvold/core/reference.css` export with `@krigsvold/core/krigsvold.css`. Update imports and copied asset paths; see [the migration guide](docs/migration-3.md).
+- Centralize the canonical Astro, React, and Jekyll stylesheet and the React presentation exports in Core.
+- Correct scientific heading contrast, narrow enlarged-text form controls, dashboard table/action spacing, and navigation presentation.
+- Preserve the shared colors, tokens, and component exports outside the renamed canonical stylesheet.
+
 ## 2.2.3 — nested appearance repair
 
 - Recompute inherited source action roles at nested appearance boundaries, including scopes that do not repeat the source-profile class. Retain secondary and disabled action precedence.
