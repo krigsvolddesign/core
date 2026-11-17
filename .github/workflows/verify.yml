@@ -27,3 +27,4 @@ jobs:
         with:
           name: krigsvold-npm
           path: dist/
+          retention-days: 3
